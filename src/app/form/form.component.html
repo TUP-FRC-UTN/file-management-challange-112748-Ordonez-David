@@ -1,0 +1,13 @@
+<form (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" [(ngModel)]="formData.name" name="name" required>
+  </div>
+  
+  <div>
+    <label for="date">Fecha:</label>
+    <input type="date" id="date" [(ngModel)]="formData.date" name="date" required>
+  </div>
+  
+  <button type="submit">Enviar</button>
+</form>

@@ -1,0 +1,38 @@
+<table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Creación</th>
+        <th>Tipo</th>
+        <th>Dueños</th>
+
+      </tr>
+    </thead>
+    <tbody>
+    
+        @for (item of fileList; track item.name) {
+            <tr>
+            <td>{{ item.name }}</td>
+            <td>{{ item.creation | date:'dd/MM/yyyy'  }}</td>
+            <td>{{ item.type }}</td>
+            @for (owner of item.owners; track $index) {
+                <td><img src={{owner.avatarUrl}}   width="40px" srcset=""></td>
+
+            }
+            </tr>
+            } @empty {
+            <li>There are no items.</li>
+            }
+    
+        
+
+    
+    
+    
+    </tbody>
+  
+
+
+
+
+</table>
