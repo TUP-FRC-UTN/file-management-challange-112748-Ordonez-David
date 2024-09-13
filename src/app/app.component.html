@@ -1,5 +1,5 @@
 @if (showForm) {
-    <app-form></app-form>
+    <app-form  (formSubmitted)="onFormSubmitted($event)"></app-form>
 
 }
 

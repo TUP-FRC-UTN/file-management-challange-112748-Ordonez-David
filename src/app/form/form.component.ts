@@ -20,7 +20,7 @@ export class FormComponent {
 
   onSubmit() {
   this.formSubmitted.emit(this.formData);
-  // Limpiar el formulario si lo deseas
+
   this.formData = { name: '', date: '' };
 }
 

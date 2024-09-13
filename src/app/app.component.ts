@@ -22,4 +22,15 @@ export class AppComponent {
     this.showForm = true;
   }
 
+  
+  
+
+  tableData: any; // Arreglo para almacenar los datos del formulario
+
+  // Método que recibe los datos del formulario
+  onFormSubmitted(data: any) {
+    this.tableData.push(data); // Agrega los datos recibidos a la tabla
+  }
+
+
 }
